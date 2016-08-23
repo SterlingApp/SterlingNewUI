@@ -1,77 +1,48 @@
-<!-- <ion-view>
-    <style>
-       
-
-    </style>
-       <ion-content>
-           <h3 class="h" > <strong> Recent Disbursement</strong></h3>
-           <div class="div1">         
-           <div class="row">
-             <p>04/28/2014</p>
-           </div>
-          
-           <div class = "row">
-   <div class = "col col1 col-75">Adjesment-Office</div>
-   <div class = "col col2">$33.00</div>
-</div>
-           </div>
-           <div class="div1">
-            
-          
-           <div class="row">
-             <p>04/21/2014</p>
-           </div>
-
-           <div class = "row">
-   <div class = "col col1 col-75">Debit Card Purchase</div>
-   <div class = "col col2">$318.00</div>
-</div>
-            </div>
-           <div class="div1">
-           
-           <div class="row">
-             <p>03/03/2014</p>
-           </div>
-          
-           <div class = "row">
-   <div class = "col col1 col-75">Debit Card Purchase</div>
-   <div class = "col col2">$8.10</div>
-</div>
-            
-           </div>
- <div class="div1">      
-           <div class="row">
-             <p>02/22/2014</p>
-           </div>
-                
-    
-
-            
-           <div class = "row">
-   <div class = "col col1 col-75">Debit Card Purchase</div>
-   <div class = "col col2">$14.90</div>
-</div>
-            </div>
- <div class="div1">
-            
-          
-           <div class="row">
-             <p>02/12/2014</p>
-           </div>
-            
-           <div class = "row">
-   <div class = "col col1 col-75">Debit Card Purchase</div>
-   <div class = "col col2">$1,500.0</div>
-</div>
- </div>
-
-       </ion-content>
-    </ion-view> -->
-
-
 <ion-view>
 	<ion-content>
-		<h3 class="" > <strong> <i class="ion ion-arrow-left-a" onclick="window.history.back();"></i > Recent Contributions</strong></h3>
+		<div class="row" >
+			<div class="col col-20" onclick="window.history.back();" style="background-color:#1C2A36">
+				<img src="img/back.jpg"  style="height:45px;">
+			</div>
+			<div class="col col-90"  style="background-color:#629AD4">
+				<h4 class="" style="color:#fff;padding:5px;padding-left:20px;" > Recent Disbursement</h4>
+			</div>
+		</div>
+		<div class="row hide ">
+			<div class="col col-center">
+			  <h3 class="ion ion-arrow-left-a" onclick="window.history.back();"> Recent Disbrusement</h3> 
+			</div>
+		</div> 
+		<h4 style="margin-left:5px;color:#496E9B">Fee Date: 07/29/2016</h4>
+		<div class="card" >
+			<div style="margin-left:20px;"; >
+				<p><b>Fee name</b></p>
+				<p>Outside Investment transfer</p>
+				<p><b>Amount</b></p>
+				<p>$179</p>				
+			</div>		
+		</div>
+		<h4 style="margin-left:5px;color:#496E9B">Fee Date: 07/29/2016</h4>
+		<div class="card" >
+			<div style="margin-left:20px;"; >
+				<p><b>Fee name</b></p>
+				<p>To Provider</p>
+				<p><b>Amount</b></p>
+				<p>$179</p>				
+			</div>		
+		</div>
+		<h4 style="margin-left:5px;color:#496E9B">Fee Date: 07/29/2016</h4>
+		<div class="card" >
+			<div style="margin-left:20px;"; >
+				<p><b>Fee name</b></p>
+				<p>To Provider</p>
+				<p><b>Amount</b></p>
+				<p>$179</p>				
+			</div>		
+		</div>
+		
+		 
+		<h3 class=" hide" > <strong> <i class="ion ion-arrow-left-a" onclick="window.history.back();"></i > Recent Disbrusement</strong></h3>
 		<div class="div1" ng-repeat="data in transcation_list">
 			<div class="row">
 				<p>{{data.FEE_DATE}}</p>
@@ -81,5 +52,6 @@
 				<div class = "col col2">{{data.AMOUNT}}</div>
 			</div>
 		</div>
+		<div style="height: 200px;"></div>
 	</ion-content>
 </ion-view>

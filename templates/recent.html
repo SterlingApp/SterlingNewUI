@@ -1,6 +1,46 @@
 <ion-view>
 	<ion-content>
-		<h3 class="" > <strong><i class="ion ion-arrow-left-a" onclick="window.history.back();"></i>  Recent Contributions</strong></h3>
+		<div class="row" >
+			<div class="col col-20" onclick="window.history.back();" style="background-color:#1C2A36">
+				<img src="img/back.jpg"  style="height:45px;">
+			</div>
+			<div class="col col-90"  style="background-color:#629AD4">
+				<h4 class="" style="color:#fff;padding:5px;padding-left:20px;" > Recent Contributions</h4>
+			</div>
+		</div>
+		<div class="row hide ">
+			<div class="col col-center">
+			  <h3 class="ion ion-arrow-left-a" onclick="window.history.back();"> Recent Contributions</h3> 
+			</div>
+		</div> 
+		<h4 style="margin-left:5px;color:#496E9B">Fee Date: 07/29/2016</h4>
+		<div class="card" >
+			<div style="margin-left:20px;"; >
+                <p><b>Fee name</b></p>
+				<p>Regular Contribution</p>
+                <p><b>Amount</b></p>
+                <p>$179</p>				
+			</div>		
+		</div>
+		<h4 style="margin-left:5px;color:#496E9B">Fee Date: 07/29/2016</h4>
+		<div class="card" >
+			<div style="margin-left:20px;"; >
+                <p><b>Fee name</b></p>
+				<p>Regular Contribution</p>
+                <p><b>Amount</b></p>
+                <p>$179</p>				
+			</div>		
+		</div>
+		<h4 style="margin-left:5px;color:#496E9B">Fee Date: 07/29/2016</h4>
+		<div class="card" >
+			<div style="margin-left:20px;"; >
+                <p><b>Fee name</b></p>
+				<p>Regular Contribution</p>
+                <p><b>Amount</b></p>
+                <p>$179</p>				
+			</div>		
+		</div>
+		
 		<div class="div1" ng-repeat="data in transcation_list">
 			<div class="row">
 				<p>{{data.FEE_DATE}}</p>
@@ -10,5 +50,9 @@
 				<div class = "col col2">{{data.AMOUNT}}</div>
 			</div>
 		</div>
+		
+		
+		<!--the below code used for Scrolling -->
+		<div style="height: 150px;"></div>
 	</ion-content>
 </ion-view>

@@ -1,28 +1,28 @@
 <ion-view>
-  
-
-    <ion-content   >
-	<ion-scroll zooming = "true" direction = "xy" style = "height: 1000px">
-      <div class="row">
-        <div class="col col-center">
-			<h3 class=""><i class="ion ion-arrow-left-a" onclick="window.history.back();"></i > Account Information</h3>
-        </div>
-      </div>
+    <ion-content>
+		<div class="row" >
+			<div class="col col-20" style="background-color:#1C2A36">
+				<img src="img/back.jpg" onclick="window.history.back();" style="height:45px;">
+			</div>
+			<div class="col col-90"  style="background-color:#629AD4">
+				<h4 class="" style="color:#fff;padding:5px;padding-left:20px;" > Account Information</h4>
+			</div>
+		</div>
       
-       <div class="card" >
-         <div style="margin-left:20px; margin-top:10px";>
+		<div class="card" >
+			<div style="";>
                 <p><b>Account Number</b></p>
 				<p>5847{{account_information.ACC_NUM}}</p>
                 <p><b>Plan</b></p>
-                <p>fsa{{account_information.PLAN_NAME}}</p>
+                <p>hsa{{account_information.PLAN_NAME}}</p>
 				<p><b>HSA Effective Date</b></p>
                 <p>22.08.2016{{account_information.EFFECTIVE_DATE}}</p>
 				<p><b>Account Balance</b></p>
                 <p>$26.08{{account_information.ACCT_BALANCE}}</p>
-		 </div>		
-       </div>
-		 <div class="card" >
-             <div style="margin-left:20px; margin-top:10px";>
+			</div>		
+		</div>
+		<div class="card" >
+            <div style="margin-left:20px; margin-top:10px";>
                 <p><b>Total Contributions for 2016</b></p>
 				<p>${{total_contributions.CONTRB_LIMIT}}</p>
                 <p><b>Allowable Contributions Remaining for 2016</b></p>
@@ -33,7 +33,10 @@
                 <p>$26.08{{total_contributions.TOTAL_DISB_AMOUNT}}</p>
 			</div>
         </div>
-    
-     </ion-scroll>
+		
+		<!--
+			This bellow coding used for shwoing all the content 
+			-->
+			<div style="height: 200px;"></div>
   </ion-content>
 </ion-view>

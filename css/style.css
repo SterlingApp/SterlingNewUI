@@ -65,3 +65,40 @@ margin-left:50px;
     width: 100%;
     border-radius: 4px; }
  */
+.input-box[type=text] {
+   height:25px;
+   border: 0;
+   width: 100%; 
+   margin-left:-15px; 
+ 
+  box-shadow: -5px 10px 0px -7px #dedede, 5px 10px 0px -7px #dedede;
+  -webkit-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s; 
+}
+.input-boxfocus[type=text]:focus {
+   outline: none; 
+  box-shadow: -5px 10px 0px -7px #547AAC, 5px 10px 0px -7px #547AAC; 
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.no-padding {
+    padding: 0px !important;
+}
+.coli{
+	
+    background: -webkit-linear-gradient( #FF9C1B , #FFC837); /* Chrome 10-25, Safari 5.1-6 */
+    
+}
+.barcol{
+	 background-color:#00B1DA;
+}
+.item-select select
+{
+	left:0;
+    right: auto;
+    padding: 13px 45px 15px 10px;
+    direction: ltr;
+}
