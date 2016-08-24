@@ -5,7 +5,7 @@
                      <img src="img/back.jpg" onclick="window.history.back();" style="height:32px;width:25px;">
                    </div>
                    <div class="col col-90"  style="background-color:#629AD4">
-                         <h4 class="" style="color:#fff; margin-top:05px;" >Recent Disbursement</h4>
+                         <h4 class="home-head" style="color:#fff; margin-top:05px;" >Recent Disbursement</h4>
                    </div>
                </div>
   
@@ -14,28 +14,28 @@
 		<h4 style="margin-left:5px;color:#496E9B">Fee Date: 07/29/2016</h4>
 		<div class="card" >
 			<div style="margin-left:20px;"; >
-				<p><b>Fee name</b></p>
-				<p>Outside Investment transfer</p>
-				<p><b>Amount</b></p>
-				<p>$179</p>				
+				<p class="content-head"><b>Fee name</b></p>
+				<p class="sub-head">Outside Investment transfer</p>
+				<p class="content-head"><b>Amount</b></p>
+				<p class="sub-head">$179</p>				
 			</div>		
 		</div>
 		<h4 style="margin-left:5px;color:#496E9B">Fee Date: 07/29/2016</h4>
 		<div class="card" >
 			<div style="margin-left:20px;"; >
-				<p><b>Fee name</b></p>
-				<p>To Provider</p>
-				<p><b>Amount</b></p>
-				<p>$179</p>				
+				<p class="content-head"><b>Fee name</b></p>
+				<p class="sub-head">To Provider</p>
+				<p class="content-head"><b>Amount</b></p>
+				<p class="sub-head">$179</p>				
 			</div>		
 		</div>
 		<h4 style="margin-left:5px;color:#496E9B">Fee Date: 07/29/2016</h4>
 		<div class="card" >
 			<div style="margin-left:20px;"; >
-				<p><b>Fee name</b></p>
-				<p>To Provider</p>
-				<p><b>Amount</b></p>
-				<p>$179</p>				
+				<p class="content-head"><b>Fee name</b></p>
+				<p class="sub-head">To Provider</p>
+				<p class="content-head"><b>Amount</b></p>
+				<p class="sub-head">$179</p>				
 			</div>		
 		</div>
 		
@@ -43,7 +43,7 @@
 		<h3 class=" hide" > <strong> <i class="ion ion-arrow-left-a" onclick="window.history.back();"></i > Recent Disbrusement</strong></h3>
 		<div class="div1" ng-repeat="data in transcation_list">
 			<div class="row">
-				<p>{{data.FEE_DATE}}</p>
+				<p  class="sub-head">{{data.FEE_DATE}}</p>
 			</div>
 			<div class = "row">
 				<div class = "col col1 col-75">{{data.FEE_NAME}}</div>

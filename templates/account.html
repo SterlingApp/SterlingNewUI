@@ -1,36 +1,36 @@
 <ion-view>
     <ion-content>
-		<div class="row" >
-			<div class="col col-20" style="background-color:#1C2A36">
-				<img src="img/back.jpg" onclick="window.history.back();" style="height:45px;">
+		<div class="row no-padding" style="height:40px" >
+			<div class="col col-10" style="background-color:#1C2A36">
+				<img src="img/back.jpg" onclick="window.history.back();" style="height:30px;width:25px;">
 			</div>
 			<div class="col col-90"  style="background-color:#629AD4">
-				<h4 class="" style="color:#fff;" > Account Information</h4>
+				<h4 class="home-head" style="color:#fff;" >Account Information</h4>
 			</div>
 		</div>
       
 		<div class="card" >
 			<div style="margin-left:20px; margin-top:10px";>
-                <p><b>Account Number</b></p>
-				<p>5847{{account_information.ACC_NUM}}</p>
-                <p><b>Plan</b></p>
-                <p>hsa{{account_information.PLAN_NAME}}</p>
-				<p><b>HSA Effective Date</b></p>
-                <p>22.08.2016{{account_information.EFFECTIVE_DATE}}</p>
-				<p><b>Account Balance</b></p>
-                <p>$26.08{{account_information.ACCT_BALANCE}}</p>
+                <p class="content-head"><b>Account Number</b></p>
+				<p class="sub-head">5847{{account_information.ACC_NUM}}</p>
+                <p class="content-head"><b>Plan</b></p>
+                <p class="sub-head">hsa{{account_information.PLAN_NAME}}</p>
+				<p class="content-head"><b>HSA Effective Date</b></p>
+                <p class="sub-head">22.08.2016{{account_information.EFFECTIVE_DATE}}</p>
+				<p class="content-head"><b>Account Balance</b></p>
+                <p class="sub-head">$26.08{{account_information.ACCT_BALANCE}}</p>
 			</div>		
 		</div>
 		<div class="card" >
             <div style="margin-left:20px; margin-top:10px";>
-                <p><b>Total Contributions for 2016</b></p>
-				<p>${{total_contributions.CONTRB_LIMIT}}</p>
-                <p><b>Allowable Contributions Remaining for 2016</b></p>
-                <p>${{total_contributions.CURRENT_YR_CONTRB}}</p>
-				<p><b>HSA Effective Date</b></p>
-                <p>22.08.2016{{total_contributions.EFFECTIVE_DATE}}</p>
-				<p><b>Total Disbursement for 2016</b></p>
-                <p>$26.08{{total_contributions.TOTAL_DISB_AMOUNT}}</p>
+                <p class="content-head"><b>Total Contributions for 2016</b></p>
+				<p class="sub-head">${{total_contributions.CONTRB_LIMIT}}</p>
+                <p class="content-head"><b>Allowable Contributions Remaining for 2016</b></p>
+                <p class="sub-head">${{total_contributions.CURRENT_YR_CONTRB}}</p>
+				<p class="content-head"><b>HSA Effective Date</b></p>
+                <p class="sub-head">22.08.2016{{total_contributions.EFFECTIVE_DATE}}</p>
+				<p class="content-head"><b>Total Disbursement for 2016</b></p>
+                <p class="sub-head">$26.08{{total_contributions.TOTAL_DISB_AMOUNT}}</p>
 			</div>
         </div>
 		
