@@ -103,32 +103,38 @@ margin-left:50px;
     direction: ltr;
 }
 .home-head {
-	font-size:20px;
+	font-size:24px;
+	font-family: Segoe UI;
+	color: #454b4e;
 }
 .content-head{
-	font-size:17px;
+	font-size:18px;
+	font-family: Segoe UI;
+	color: #8f8f8f;
 }
 .sub-head {
-	font-size:15px
+	font-size:20px;
+	font-family: Segoe UI;
+	color: #00aff0;
 }
 
 .lineBreak{
-	border-bottom: thin solid #009EE5; 
+	border-bottom: thin solid #00aff0; 
 	width:90%;
-	color:#009EE5;
-	font: arial, sans-serif;
+	color:#00aff0;
+	font-family: Segoe UI;
+	font-size:18px;
 	
 }
 
 .lineValueText{
-	color:#009EE5;
-	font: Times New Roman;
-	font-weight: bold;
+	color:#00aff0;
+	font-family: Segoe UI;
+	font-size: 20px;
 }
 
 .lineHead{
-	color:#A6A6A6;
-	font: Times New Roman;
-	font-weight: normal;
-	font-size: 12px;
+	color:#8f8f8f;
+	font-family: Segoe UI;
+	font-size: 18px;
 }
