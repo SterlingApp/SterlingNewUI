@@ -102,9 +102,12 @@ margin-left:50px;
     padding: 13px 45px 15px 10px;
     direction: ltr;
 }
-p{
-	font-size:15px;
+.home-head {
+	font-size:20px;
 }
-.header{
-	fontsize:15px;
+p.content-head{
+	fontsize:17px;
+}
+p.sub-head {
+	font-size:15px
 }
