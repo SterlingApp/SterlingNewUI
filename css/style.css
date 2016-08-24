@@ -105,9 +105,30 @@ margin-left:50px;
 .home-head {
 	font-size:20px;
 }
-p.content-head{
-	fontsize:17px;
+.content-head{
+	font-size:17px;
 }
-p.sub-head {
+.sub-head {
 	font-size:15px
+}
+
+.lineBreak{
+	border-bottom: thin solid #009EE5; 
+	width:90%;
+	color:#009EE5;
+	font: arial, sans-serif;
+	
+}
+
+.lineValueText{
+	color:#009EE5;
+	font: Times New Roman;
+	font-weight: bold;
+}
+
+.lineHead{
+	color:#A6A6A6;
+	font: Times New Roman;
+	font-weight: normal;
+	font-size: 12px;
 }
