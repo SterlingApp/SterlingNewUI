@@ -57,8 +57,25 @@ $scope.goForward = function () {
     Chats.remove(chat);
   };
 })
+.controller('FsaCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork) {
+	
+	localStorage.setItem("backCount","2");
+	
+	
+	
+})
+.controller('HsaCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork,$ionicHistory) {
+	localStorage.setItem("backCount","2");
+	$ionicHistory.clearHistory();
+	$rootScope.hidecontent=false;
+	
+	
+	
+	
+})
 
 .controller('heading', function($scope,$location,$rootScope,$stateParams, Chats) {
+	
   var i=0;
   
   $scope.selectColor="#496E9B";
@@ -109,15 +126,8 @@ $scope.goForward = function () {
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.chatId);
 })
-.controller('PageCtrl', function($scope, $stateParams, Chats,$rootScope) {
- $rootScope.hideit = true;
-})
 
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
-})
+
 
 .controller('PortfolioCtrl', function($rootScope,$scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork) {
 	localStorage.setItem("backCount","1");
@@ -143,7 +153,8 @@ $scope.goForward = function () {
 	
 	
 })
-.controller('AvailablebalanceCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork) {
+.controller('AvailablebalanceCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork,$rootScope) {
+	$rootScope.hidecontent=true;
 	localStorage.setItem("backCount","3");
 	$scope.access_token = localStorage.getItem('access_token');
 	
@@ -156,6 +167,7 @@ $scope.goForward = function () {
  })	   
 })
 .controller('InformationCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork,$rootScope) {
+	$rootScope.hidecontent=true;
 	localStorage.setItem("backCount","3");
 	$scope.username = localStorage.getItem('username');
 	$scope.access_token = localStorage.getItem('access_token');
@@ -170,7 +182,8 @@ $scope.goForward = function () {
 })
 
 
-.controller('FlexibleCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork,$cordovaSQLite) {
+.controller('FlexibleCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork,$cordovaSQLite,$rootScope) {
+	$rootScope.hidecontent=true;
 	localStorage.setItem("backCount","2");
 
 	
@@ -179,18 +192,15 @@ $scope.goForward = function () {
 	
 })
 
-.controller('HsaCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork) {
-	localStorage.setItem("backCount","2");
-	
-	
-	
-})
 
-.controller('contactCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork) {
+
+.controller('contactCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork,$rootScope) {
+	$rootScope.hidecontent=true;
 	localStorage.setItem("backCount","2");
 })
 
-.controller('NewCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork) {
+.controller('NewCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork,$rootScope) {
+	$rootScope.hidecontent=true;
 	localStorage.setItem("backCount","2");
 	$scope.getClaim = function(claim) {
 		
@@ -203,12 +213,14 @@ $scope.goForward = function () {
 	}
 })
 
-.controller('MakeCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork) {
+.controller('MakeCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork,$rootScope) {
+	$rootScope.hidecontent=true;
 	localStorage.setItem("backCount","3");
 	
 })
 
-.controller('ActivityCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork) {
+.controller('ActivityCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork,$rootScope) {
+	$rootScope.hidecontent=true;
 	localStorage.setItem("backCount","3");
 	
 	$scope.username = localStorage.getItem('username');
@@ -223,13 +235,16 @@ $scope.goForward = function () {
 	
 })
 
-.controller('HealthCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork) {
+.controller('HealthCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork,$rootScope) {
+	$rootScope.hidecontent=true;
 	localStorage.setItem("backCount","3");
 })
 
 
-.controller('AccountCtrl', function($rootScope,$scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork) {
+.controller('AccountCtrl', function($rootScope,$scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork,$ionicHistory) {
 	localStorage.setItem("backCount","3");
+	$rootScope.hidecontent=true;
+	$ionicHistory.clearHistory();
 	$scope.username = localStorage.getItem('username');
 	$scope.access_token = localStorage.getItem('access_token');
 	 $scope.acc_num=$rootScope.hsaaccno;
@@ -251,22 +266,28 @@ $scope.goForward = function () {
 
 
 
-.controller('newclaimCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork) {
+.controller('newclaimCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork,$ionicScrollDelegate,$rootScope) {
+		$rootScope.hidecontent=true;
 	 localStorage.setItem("backCount","3");
+	 $ionicScrollDelegate.scrollBottom(true);
 })
-.controller('NewclaimbicycleCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork) {
+.controller('NewclaimbicycleCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork,$rootScope) {
+		$rootScope.hidecontent=true;
 	 localStorage.setItem("backCount","3");
 })
 
-.controller('FlexibleactivityCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork) {
+.controller('FlexibleactivityCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork,	$rootScope) {
+	$rootScope.hidecontent=true;
 	localStorage.setItem("backCount","3");
 })
 
-.controller('RecentdisCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork) {
+.controller('RecentdisCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork,$rootScope) {
+	$rootScope.hidecontent=true;
 	localStorage.setItem("backCount","4");
 })
 
-.controller('RecentcontributeCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork) {
+.controller('RecentcontributeCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork,$rootScope) {
+	$rootScope.hidecontent=true;
 	
  localStorage.setItem("backCount","4");
  $scope.username = localStorage.getItem('username');
@@ -280,7 +301,8 @@ $scope.goForward = function () {
   // })
 })
 
-.controller('TaxyearCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork) {
+.controller('TaxyearCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork,	$rootScope) {
+	$rootScope.hidecontent=true;
 	localStorage.setItem("backCount","4");
 	
 	// $scope.username = localStorage.getItem('username');
@@ -293,16 +315,30 @@ $scope.goForward = function () {
    // alert("ERROR: " + JSON.stringify(err));
   // })
 })
-.controller('ContributionCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork) {
+.controller('ContributionCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork,$rootScope) {
+		$rootScope.hidecontent=true;
+		$scope.back=function(){
+			
+			window.history.back();
+            window.history.reload();
+		}
 	localStorage.setItem("backCount","4");
 })
-.controller('HsastatementCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork) {
+.controller('HsastatementCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork,$rootScope) {
+	$rootScope.hidecontent=true;
+	localStorage.setItem("backCount","4");
+	  $scope.date=$scope.activity;
+	
+})
+.controller('statementCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork,$rootScope) {
+	$rootScope.hidecontent=true;
 	localStorage.setItem("backCount","4");
 	  $scope.date=$scope.activity;
 	
 })
 
 .controller('ActivitystmntCtrl', function($scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork,$rootScope) {
+	$rootScope.hidecontent=true;
 	localStorage.setItem("backCount","4");
 	$rootScope.activity={startDate:'',EndtDate:''};
 	
@@ -388,6 +424,7 @@ $scope.goForward = function () {
 })
 
 .controller('PaymeCtrl', function($scope,$rootScope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork) {
+	$rootScope.hidecontent=true;
 	localStorage.setItem("backCount","4");
 	
 	
@@ -459,6 +496,7 @@ $scope.goForward = function () {
 })
 
 .controller('PayproviderCtrl', function($scope,$rootScope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork) {
+	$rootScope.hidecontent=true;
 	localStorage.setItem("backCount","4");
 	$scope.TransDate="";
 	
@@ -529,12 +567,14 @@ $scope.goForward = function () {
 
 
 .controller('DisbursementCtrl', function($rootScope,$scope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork) {
+	$rootScope.hidecontent=true;
 	localStorage.setItem("backCount","4");
 	//alert("DisbursementCtrl");
 })
 
 
 .controller('ScheduledcontributeCtrl', function($scope,$rootScope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork) {
+	$rootScope.hidecontent=true;
 	localStorage.setItem("backCount","5");
 	$scope.username = localStorage.getItem('username');
 	$scope.access_token = localStorage.getItem('access_token');
@@ -550,6 +590,7 @@ $scope.goForward = function () {
 	})
 
 .controller('ScheduledDisbursementCtrl', function($scope,$rootScope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork) {
+	$rootScope.hidecontent=true;
 	localStorage.setItem("backCount","5");
 	$scope.username = localStorage.getItem('username');
 	$scope.access_token = localStorage.getItem('access_token');
@@ -565,6 +606,7 @@ $scope.goForward = function () {
 	})
 	
 .controller('RecentCtrl', function($scope,$rootScope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork) {
+	$rootScope.hidecontent=true;
 	localStorage.setItem("backCount","5");
 	$scope.username = localStorage.getItem('username');
 	$scope.access_token = localStorage.getItem('access_token');
@@ -581,6 +623,7 @@ $scope.goForward = function () {
 })
 
 .controller('RecentdisburseCtrl', function($scope,$rootScope,$ionicPlatform,$cordovaDatePicker,$http,$location,$ionicModal,$cordovaDialogs,$ionicLoading,$cordovaNetwork) {
+	$rootScope.hidecontent=true;
 	localStorage.setItem("backCount","5");
 	//alert('RecentdisburseCtrl');
 	$scope.username = localStorage.getItem('username');
