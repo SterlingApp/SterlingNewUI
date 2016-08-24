@@ -7,7 +7,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers','ngCordova', 'starter.services'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform,$rootScope,$location) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -21,6 +21,11 @@ angular.module('starter', ['ionic', 'starter.controllers','ngCordova', 'starter.
       StatusBar.styleDefault();
     }
   });
+  
+  
+   
+  
+
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -47,7 +52,7 @@ angular.module('starter', ['ionic', 'starter.controllers','ngCordova', 'starter.
   .state('fsa', {
     url: '/fsa',
     templateUrl: 'templates/fsa.html',
-	controller: 'DashCtrl'    
+	controller: 'FsaCtrl'    
   })
   
  
@@ -196,6 +201,13 @@ angular.module('starter', ['ionic', 'starter.controllers','ngCordova', 'starter.
           templateUrl: 'templates/hsastatement.html',
 		  controller: 'HsastatementCtrl'
     })
+	.state('statement', {
+      url: '/statement',
+      
+          templateUrl: 'templates/statement.html',
+		  controller: 'StatementCtrl'
+    })
+    
     
  .state('payprovider', {
       url: '/payprovider',
@@ -203,6 +215,7 @@ angular.module('starter', ['ionic', 'starter.controllers','ngCordova', 'starter.
 		  controller: 'PayproviderCtrl'
     });
 
-  $urlRouterProvider.otherwise('/login');
+  $urlRouterProvider.otherwise('/hsa');
+  
 
 });
