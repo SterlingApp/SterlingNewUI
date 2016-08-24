@@ -102,6 +102,7 @@ $scope.goForward = function () {
   $scope.logOut=function()
   {
 	  alert("are you want to logout")
+	  $location.path('/login');
   }
 
 })
